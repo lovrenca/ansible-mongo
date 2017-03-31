@@ -1,0 +1,18 @@
+---
+# Mongo configuration
+systemLog:
+  destination: syslog
+net:
+  bindIp: 127.0.0.1,172.17.42.1
+setParameter:
+ enableLocalhostAuthBypass: false
+security:
+  authorization: disabled
+operationProfiling:
+  slowOpThresholdMs: 150
+  mode: slowOp
+storage:
+  directoryPerDB: true
+  dbPath: "{{ mongo_data_path }}"
+  mmapv1:
+smallFiles: true
