@@ -15,4 +15,4 @@ storage:
   directoryPerDB: true
   dbPath: "{{ mongo_data_path }}"
   mmapv1:
-smallFiles: true
+    smallFiles: true
