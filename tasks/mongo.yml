@@ -2,8 +2,7 @@
 
 - name: Import mongodb repo key
   apt_key:
-    id: "{{ mongo_repo_key }}"
-    keyserver: "{{ mongo_repo_keyserver}}"
+    url: "{{ mongo_repo_keyserver }}"
     state: present
 
 - name: Add mongodb repo
